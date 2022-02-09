@@ -22,3 +22,24 @@ DOUBLING THE HYPERPARAMETER VALUE FOR RIDGE
 Same process for lasso regression
 
 Number of predictors selected by double the optimal alpha for lasso are:129
+
+The optimal value of alpha is
+•	Ridge – 10
+•	Lasso – 0.0004
+If we double the value of alpha, we are telling the model to reduce the coefficient of features and in Lasso we will clearly see more features being eliminated. This results in underfitting. After doubling the alpha value following are the important predictor variables.!
+
+Five most important predictor variables are:
+•	TotalBsmtSF
+•	OverallCond
+•	Foundation_PConc,
+•	GarageCars, BsmtFinSF1
+•	MSZoning_RM
+To make sure that model is robust and generalizable:
+
+•	Test it in on both Train and Test dataset and make sure to choose that Hyperparameter for which the accuracy (R square) on both Test and Train is close.
+•	Make sure no overfitting is happening. If overfitting is there then we try to add some bias to it (using regularization techniques)
+•	Also Try to use lesser number of independent variables to predict the dependent variable. It can be achieved by VIF or applying Regularization (preferably Lasso).
+
+
+
+
